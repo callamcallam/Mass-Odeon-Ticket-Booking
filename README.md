@@ -1,19 +1,33 @@
-# ODEON Seat Blocker
+# **ODEON Seat Blocker**
 
-CLI tool to block up to 9 seats at ODEON cinemas for 12 minutes at a time.
+CLI tool demonstrating seat-reservation/session-hold behaviour for educational and authorized testing purposes.
 
-## What it does
+## **Disclaimer**
 
-Blocks seats to make cinemas appear busy without actually buying tickets. Run repeatedly to keep seats blocked indefinitely.
+This project is provided **for educational, research, and authorized testing purposes only**.
 
-## How it works
+Do not use it against systems, cinemas, accounts, or services that you do not own or have explicit permission to test. The author does not encourage or authorize misuse of this software and accepts no responsibility for unauthorized, unlawful, abusive, or disruptive use by third parties.
 
-1. Select cinema, film, showtime
-2. Choose seats (e.g., `C1-4` for seats C1-C4)
-3. Blocks them for 12 minutes
-4. Run again to re-block
+You are solely responsible for ensuring that your use complies with applicable laws, terms of service, and permissions.
 
-## Visual Guide
+## **What it does**
+
+Demonstrates how temporary cinema seat holds can work without completing a ticket purchase.
+
+## **How it works**
+
+1. Select cinema, film, and showtime
+2. Choose seats (e.g. `C1-4` for seats C1-C4)
+3. Creates a temporary seat hold
+4. The hold expires after the applicable reservation period
+
+## **Beta** 
+
+1. Book entire cinema out.
+2. Draw patterns in seat layout. - broken
+3. Auto-select N contiguous seats
+
+## **Visual Guide**
 
 <img src="imgs/1.png" alt="Step 1" width="600">
 
@@ -33,20 +47,22 @@ Blocks seats to make cinemas appear busy without actually buying tickets. Run re
 
 <img src="imgs/9.png" alt="Step 9" width="600">
 
-## Install
+## **Install**
 
 ```bash
 pip install requests
 ```
 
-## Use
+## **Use**
 
 ```bash
-python odeon_reservation.py
+python odeon_book_tickets.py
 ```
+```bash
+python odeon_book_beta.py
+```
+## **Note**
 
-## Note
-
-- Max 9 seats per run
-- Blocks last 12 minutes
-- Re-run to maintain block
+* Intended only for systems you own or are explicitly authorized to test
+* Temporary holds expire automatically
+* Do not use this software to disrupt genuine customers or booking availability
